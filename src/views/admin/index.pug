@@ -1,0 +1,11 @@
+extends admin_layout
+
+block content
+    .container.w
+        .row
+            fieldset
+                legend Welcome, #{user.name}
+
+                ul
+                    li: a(href="/admin/settings") Change site settings
+                    li: a(href="/admin/pages") Manage site's pages

@@ -1,0 +1,81 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content=description)
+    meta(name='author', content='Raul, raul@creativeclr.com')
+    link(rel='alternate', type='application/rss+xml', title='CreativeCLR » Blog Feed', href='http://www.creativeclr.net/blog/rss')
+    title #{title}
+    link(href='/plugins/bootstrap/bootstrap.css', rel='stylesheet')
+    link(href='/plugins/font-awesome.min.css', rel='stylesheet')
+    link(href='/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.css', rel='stylesheet')
+    link(href='/css/main.css', rel='stylesheet')
+    link(href='/css/admin.css', rel='stylesheet')
+    script.
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', #{GA_ID}]);
+      _gaq.push(['_setDomainName', #{GA_domainName}]);
+      _gaq.push(['_trackPageview']);
+      (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+  body
+    .navbar.navbar-inverse
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/')
+            img(src='/images/webstein-logo.png', alt='CreativeCLR.net logo')
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li: a(href='/admin/pages') CMS pages
+            li: a(href='/admin/settings') CMS Settings
+            li: a(href='/') Back to site
+
+    block content
+
+    #footer
+      .container
+        .row.centered
+          .col-md-4.text-left
+            h4 Menu
+              ul.activation_link_list
+                li: a(href='/services', title='Services') Services
+                li: a(href='/clients', title='Clients') Clients
+                li: a(href='/contact', title='Contact') Contact
+                li: a(href='/blog', title='Blog') Blog
+                li: a(href='/legal') Legal
+            p(style='line-height:20px;color:#777')
+            | In order to offer you a seamless browsing experience, we use cookies. By continuing your navigation, you agree to our a(href='/legal#cookie') cookie policy
+          .col-md-4.text-left
+            h4 Social
+              a(href='https://twitter.com/ra00l'): i.fa.fa-twitter
+              a(href='https://www.facebook.com/webstein.ro'): i.fa.fa-facebook
+              a(href='http://ro.linkedin.com/in/ra00l'): i.fa.fa-linkedin
+              a(href='https://plus.google.com/b/101284750114974355585/101284750114974355585'): i.fa.fa-google-plus
+            h4 Tools
+            ul
+              li: a(href='/tools/timezone-difference') Timezone difference between 2 locations
+              li: a(href='/tools/base64image') Embed images into HTML
+              li: a(href='/tools/dns') Domain DNS information
+              li: a(href='/tools/color', target='_blank') Solid color page
+              li: a(href='/tools/color-nuance', target='_blank') Lighten/darken color
+          .col-md-4.text-left
+            h4 Latest blog posts
+            ul
+              li: a(href='/blog/@post.SlugValue') @post.Title
+        .copyright_text © 2009 - #{new Date().getFullYear()} www.creativeclr.com
+    //-           S.C. CreativeCLR S.R.L. 104 Basarabia Blvd., Bl. A4, Sc. 2, Suite 18, District 2 Bucharest, Romania, C.U.I.: 25691319, RC: J40/7066/2009, Capital Social 400 RON*@
+    script(src='//code.jquery.com/jquery-1.10.2.min.js')
+    script(src='/plugins/bootstrap/bootstrap.min.js')
+    script(src='/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')
+    script(src='/plugins/tinymce/tinymce.min.js')
+    script(src='/plugins/tinymce/jquery.tinymce.min.js')
+    script(src='/js/custom-admin.js')
+    block scripts

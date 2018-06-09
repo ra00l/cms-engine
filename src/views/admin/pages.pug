@@ -1,0 +1,25 @@
+extends admin_layout
+
+block content
+	.container.w
+		.row
+			fieldset
+				legend Pages #{page} / #{total}
+
+				table.table.table-bordered.table-striped
+					thead
+						tr
+							th ID
+							th Name
+							th Created / Last modified
+							th Actions
+					tbody
+						each p in pageList
+							tr
+								td #{p.id}
+								td
+									abbr(title=p.title) #{p.name}
+									a(href='/' + p.url,target="_blank"): i.fa.fa-external-link(style="margin-left:10px")
+								td #{formatDate(p.date_created)} / #{ p.date_last_update ? moment(p.date_last_update).format(DATE_FORMAT) : ' [ not set ]'}
+								td
+									a(href="/admin/page/" + p.id) EDIT

@@ -1,0 +1,18 @@
+extends admin_layout
+
+block content
+    .container.w
+        .row
+            fieldset
+                legend Login
+                form(method="post",action="")
+                    if msg
+                        div.alert.alert-danger #{msg}
+
+                    div.form-group
+                        label Username
+                        input.form-control(name="user", value=user)
+                    div.form-group
+                        label Password
+                        input.form-control(type="password", name="pass")
+                    button.btn.btn-primary(type="submit") Login

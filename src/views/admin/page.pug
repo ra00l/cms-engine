@@ -1,0 +1,58 @@
+extends admin_layout
+block content
+    .container.w
+        .row
+            h1 #{page.id ? "Editing " + page.title : 'Add new page'}
+
+            if errList && errList.length
+                div.alert.alert-danger Please fix the following errors:
+                    ul
+                        each err in errList
+                            li #{err}
+
+            form.form(action='', method='post', role='form', class="form")
+                .form-group.clearfix
+                    .col-sm-6
+                        label(for='title') Title
+                        input.form-control(name='title', id='title', value=page.title)
+                    .col-sm-3
+                        label(for='url') URL
+                        input.form-control(name='url', id='url', value=page.url)
+                    .col-sm-3
+                        label(for='tags') Tags
+                        input.form-control(name='tags', id='tags', value=page.tags)
+                        p Separate tags by ","
+
+                .form-group.clearfix
+                    .col-sm-3
+                        label(for='publishDate') Publish date
+                        .input-icon.input-icon-sm.right.date-picker
+                            i.fa.fa-calendar
+                            input.form-control(name='publishDate', id='publishDate', value=page.publishDate)
+                        p Leave empty to save, but not publish!
+                    .col-sm-3
+                        label(for='category') Category
+                        select.form-control(name='category', id='category')
+                            each opt in catList
+                                option(value=opt.value, selected=(opt.value == page.category),data-url=page.url) #{opt.text}
+                        p Leave empty to save, but not publish!
+
+                .form-group.clearfix
+                    label(for='content') Content
+                    textarea.form-control(name='content', id='content', class="editable", style="height: 400px")
+                        =page.content
+
+
+                .form-group.clearfix
+                    .col-sm-6
+                        label(for='description') Description
+                        textarea.form-control(name='description', id='description', style="height: 130px")
+                            =page.description
+                    .col-sm-6
+                        label(for='exerpt') Exerpt (shown in list of posts)
+                        textarea.form-control(name='exerpt', id='exerpt', style="height: 130px")
+                            =page.exerpt
+
+                .form-group
+                    .col-sm-offset-2.col-sm-10
+                        button.btn.btn-success(type='submit') #{ page.id ? "Update post" : "Create post"}

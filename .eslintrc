@@ -1,14 +1,11 @@
 {
-	"parserOptions": {
-		"ecmaVersion": 8,
-		"ecmaFeatures": {
-			"experimentalObjectRestSpread": true
-		},
-		"sourceType": "module"
-	},
+  "parserOptions": {
+    "sourceType": "script",
+    "ecmaVersion": 2017
+  },
 
-	"env": {
-		"es6": true,
+
+  "env": {
 		"node": true
 	},
 
@@ -18,6 +15,16 @@
 		"promise",
 		"standard"
 	],
+
+  "overrides": [
+    {
+      "files": [ "test/**/*.test.js" ],
+      "env": { "mocha": true },
+      "rules": {
+        "max-nested-callbacks": [ "error", 8 ]
+      }
+    }
+  ],
 
 	"globals": {
 

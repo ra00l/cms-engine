@@ -2,7 +2,7 @@
   "author": "Raul P",
   "name": "cms-engine",
   "email": "raul@creativeclr.com",
-  "url": "https://www.creativeclr.io",
+  "url": "https://www.creativeclr.com",
   "version": "1.0.0",
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
     "start": "NODE_ENV=PRODUCTION node index.js",
     "node-dev": "node index.js",
     "nodemon-dev": "nodemon index.js",
-    "lint": "eslint index.js config.js src/**"
+    "lint": "eslint index.js config.js src/**",
+    "test": "mocha ./test/**/*.test.js"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -25,5 +26,8 @@
   },
   "engines": {
     "node": ">=6.9"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
