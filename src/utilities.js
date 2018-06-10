@@ -13,5 +13,8 @@ module.exports = {
     let hash = crypto.createHmac('sha512', config.salt);
     hash.update(pwd);
     return hash.digest('hex');
+  },
+  debug: function() {
+
   }
 };

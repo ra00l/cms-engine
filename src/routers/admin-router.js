@@ -1,12 +1,25 @@
 'use strict';
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+//const opts = require('../../index').getOptions();
+const cmsHelper = require('../cms-helper');
 
-var UserModel = require('./models/UserModel');
-var CMSModel = require('./models/CMSModel');
+function isAdminAuthd(req) {
+  return !!req.adminSession.iduser;
+}
 
-//var logger = requireRoot('./helpers/logger');
+router.all('*', function(req, res, next) {
+  const url = req.originalUrl;
+
+  if(cmsHelper.isAdminPage(url)) {
+    if(!isAdminAuthd(req)) {
+      return res.redirect('/admin/login');
+    }
+  }
+
+  return next();
+});
 
 /* GET users listing. */
 router.get('/', function (req, res) {
