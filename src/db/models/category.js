@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 const db = require('../index');
 
+const User = require('./user');
+
 const Category = db.define('category', {
   id: {
     type: Sequelize.BIGINT,
@@ -17,16 +19,18 @@ const Category = db.define('category', {
   description: {
     type: Sequelize.TEXT
   },
-  defaultPage: {
+  idDefaultPage: {
     type: Sequelize.BIGINT
-  },
-  order: {
-    type: Sequelize.INTEGER,
-    allowNull: false
   },
   status: {
     type: Sequelize.INTEGER,
     allowNull: false
+  },
+  canListContents: {
+    type: Sequelize.BOOLEAN
+  },
+  defaultLayout: {
+    type: Sequelize.STRING
   },
   createdBy: Sequelize.BIGINT,
 

@@ -1,6 +1,5 @@
 'use strict';
 const crypto = require('crypto');
-const config = require('../index').getOptions();
 
 module.exports = {
   random: function(cnt) {
@@ -9,12 +8,15 @@ module.exports = {
   promiseCatch: function(fn) {
     return function(...args) { fn(...args).catch(args[2]); };
   },
-  hash: function(pwd) {
+  hashString: function(pwd) {
+    const config = require('../index').getOptions();
+
     let hash = crypto.createHmac('sha512', config.salt);
     hash.update(pwd);
     return hash.digest('hex');
   },
-  debug: function() {
-
+  isProd: function() {
+    const envName = process.env.NODE_ENV || 'DEVELOPMENT';
+    return envName === 'PRODUCTION';
   }
 };

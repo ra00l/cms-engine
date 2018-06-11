@@ -1,15 +1,14 @@
 const opts = require('../../index').getOptions();
-const PageActions = require('../actions/pageActions');
+const PageActions = require('../actions/page');
 const utilities = require('../utilities');
 const cmsHelper = require('../cms-helper');
 
 module.exports = utilities.promiseCatch(async function (req, res, next) {
 
-  const url = req.originalUrl;
+  let url = req.originalUrl;
+  if(url.indexOf('/') === 0) url = url.substr(1);
 
-  if (cmsHelper.isAdminPage(url)) { //start with admin
-    return next();
-  }
+  console.log('entered public', url);
 
   let pageUrl = url.split('/');
 

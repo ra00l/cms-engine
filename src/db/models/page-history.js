@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../index');
 const User = require('./user');
+const Page = require('./page');
 
 const PageHistory = db.define('pageHistory', {
   id: {
@@ -26,6 +27,7 @@ const PageHistory = db.define('pageHistory', {
 }, { timestamps: true });
 
 
-Page.belongsTo(User, {foreignKey: 'createdBy', targetKey: 'id'});
+PageHistory.belongsTo(User, {foreignKey: 'createdBy', targetKey: 'id'});
+PageHistory.belongsTo(Page, {foreignKey: 'idPage', targetKey: 'id'});
 
-module.exports = Page;
+module.exports = PageHistory;

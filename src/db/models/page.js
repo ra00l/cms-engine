@@ -35,10 +35,6 @@ const Page = db.define('page', {
   content: {
     type: Sequelize.TEXT
   },
-  status: {
-    type: Sequelize.INTEGER,
-    allowNull: false
-  },
   createdBy: Sequelize.BIGINT,
 
   createdAt: Sequelize.DATE,

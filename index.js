@@ -23,7 +23,7 @@ let appOptions = null;
 let hasInit = false;
 function init(expressApp, options) {
   if(hasInit) console.warn('Caling init twice. Are you sure?');
-
+  require('./src/logger').info(options);
   appOptions = Object.assign({}, defaultOptions, options);
 
   expressApp.use(helmet());
@@ -39,8 +39,8 @@ function init(expressApp, options) {
     }
   }));
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({extended: false}));
+  expressApp.use(bodyParser.json());
+  expressApp.use(bodyParser.urlencoded({extended: false}));
 
   expressApp.use(compression({ threshold: 7 }));
 
@@ -57,5 +57,6 @@ module.exports = {
 
     return appOptions;
   },
-  logger: logger
+  logger: logger,
+  utilities: require('./src/utilities')
 };
