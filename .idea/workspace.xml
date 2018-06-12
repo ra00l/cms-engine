@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="422417fe-5ee6-488b-aaf3-a6b9d64111c6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/account.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cookie-auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/models/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/models/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/models/page-history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/models/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/models/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/admin-router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routers/public-router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilities.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/admin/admin_layout.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/admin/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/admin/login.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/admin/page.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/admin/pages.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/_setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/options.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cms-basic-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/cms-basic-test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routers/public-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routers/public-router.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,8 +20,53 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="624">
+              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_setup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/_setup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utilities.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utilities.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routers/admin-router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/db/models/page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -52,8 +74,8 @@
       <file leaf-file-name="public-router.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routers/public-router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="243">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -61,17 +83,8 @@
       <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/account.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="18" />
+            <state relative-caret-position="51">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -85,6 +98,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>isAdminAuthd</find>
+      <find>updatedAt</find>
+      <find>connectionString</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -95,26 +115,30 @@
         <option value="$PROJECT_DIR$/src/models/CMSModel.js" />
         <option value="$PROJECT_DIR$/src/models/ModelBase.js" />
         <option value="$PROJECT_DIR$/src/models/UserModel.js" />
-        <option value="$PROJECT_DIR$/src/cookie-auth.js" />
         <option value="$PROJECT_DIR$/src/models/role-type.js" />
         <option value="$PROJECT_DIR$/src/db/models/user.js" />
-        <option value="$PROJECT_DIR$/src/db/models/category.js" />
-        <option value="$PROJECT_DIR$/src/db/models/page.js" />
-        <option value="$PROJECT_DIR$/src/db/models/page-history.js" />
         <option value="$PROJECT_DIR$/src/db/models/index.js" />
-        <option value="$PROJECT_DIR$/src/db/index.js" />
         <option value="$PROJECT_DIR$/test/options.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/test/_setup.js" />
         <option value="$PROJECT_DIR$/test/options.test.js" />
-        <option value="$PROJECT_DIR$/src/utilities.js" />
         <option value="$PROJECT_DIR$/src/public-router.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/actions/account.js" />
-        <option value="$PROJECT_DIR$/src/actions/page.js" />
-        <option value="$PROJECT_DIR$/src/routers/public-router.js" />
+        <option value="$PROJECT_DIR$/src/cms-helper.js" />
+        <option value="$PROJECT_DIR$/src/cookie-auth.js" />
+        <option value="$PROJECT_DIR$/src/routers/admin-router.js" />
+        <option value="$PROJECT_DIR$/src/logger.js" />
+        <option value="$PROJECT_DIR$/src/db/models/page-history.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/src/utilities.js" />
+        <option value="$PROJECT_DIR$/src/db/models/category.js" />
+        <option value="$PROJECT_DIR$/src/db/index.js" />
+        <option value="$PROJECT_DIR$/src/actions/page.js" />
+        <option value="$PROJECT_DIR$/src/db/models/page.js" />
+        <option value="$PROJECT_DIR$/migrations.sql" />
+        <option value="$PROJECT_DIR$/src/routers/public-router.js" />
       </list>
     </option>
   </component>
@@ -134,11 +158,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
-    <option name="height" value="930" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1937" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -170,12 +194,20 @@
               <item name="cms-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="cms-engine" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cms-engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="cms-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cms-engine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cms-engine" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="routers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -186,8 +218,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="AngularJS" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../creativeclr.com" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
@@ -196,6 +229,7 @@
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="sshConsole" />
   </component>
   <component name="RecentsManager">
@@ -203,8 +237,8 @@
       <recent name="C:\work\github\cms-engine\src\routers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\work\github\cms-engine\src\db\models" />
       <recent name="C:\work\github\cms-engine\src" />
+      <recent name="C:\work\github\cms-engine\src\db\models" />
       <recent name="C:\work\github\cms-engine\src\db" />
       <recent name="C:\work\github\cms-engine\src\views" />
     </key>
@@ -244,29 +278,11 @@
       <option name="presentableId" value="Default" />
       <updated>1528534779558</updated>
       <workItem from="1528534781437" duration="2050000" />
-      <workItem from="1528551222547" duration="3956000" />
+      <workItem from="1528551222547" duration="13835000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TEST - 2018.06.09 at 17h 02m 02s.xml">
-      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="TEST - 2018.06.09 at 17h 02m 13s.xml">
-      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="TEST - 2018.06.09 at 17h 02m 33s.xml">
-      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="TEST - 2018.06.09 at 17h 03m 59s.xml">
-      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="TEST - 2018.06.09 at 17h 05m 53s.xml">
-      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="TEST - 2018.06.09 at 17h 07m 16s.xml">
-      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="TEST - 2018.06.09 at 17h 07m 26s.xml">
       <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -279,23 +295,43 @@
     <history-entry file="TEST - 2018.06.09 at 17h 18m 46s.xml">
       <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
     </history-entry>
+    <history-entry file="TEST - 2018.06.10 at 14h 32m 50s.xml">
+      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="TEST - 2018.06.10 at 14h 33m 04s.xml">
+      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="TEST - 2018.06.10 at 14h 33m 19s.xml">
+      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="TEST - 2018.06.10 at 14h 33m 40s.xml">
+      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="TEST - 2018.06.10 at 14h 33m 57s.xml">
+      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="TEST - 2018.06.10 at 14h 34m 30s.xml">
+      <configuration name="TEST" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6006000" />
+    <option name="totallyTimeSpent" value="15885000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="20" width="1260" height="620" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.2567457" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.37959182" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32920355" />
       <window_info id="npm" order="0" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32920355" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.24960254" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32920355" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32920355" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32920355" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -304,7 +340,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32920355" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,24 +401,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routers/admin-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/admin/page.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cookie-auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -411,27 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/models/page-history.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/models/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/models/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/db/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -443,13 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/db/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -491,27 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utilities.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/_setup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/account.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -519,17 +491,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cms-helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cookie-auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logger.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/_setup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routers/admin-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/models/page-history.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utilities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/migrations.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/models/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db/models/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routers/public-router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="243">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state relative-caret-position="624">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
         </state>
       </provider>
     </entry>

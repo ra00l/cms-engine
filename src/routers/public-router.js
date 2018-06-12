@@ -17,9 +17,9 @@ module.exports = utilities.promiseCatch(async function (req, res, next) {
 
   let pageToRender = opts.pages.sitePage; //'site/page';
 
-  return res.render(pageToRender, {
+  return res.render(pageToRender, Object.assign({
     title: page.title,
     description: page.description,
     content: page.content
-  });
+  }, opts.pageDefaults));
 });
