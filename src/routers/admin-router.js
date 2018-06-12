@@ -2,20 +2,29 @@
 
 const express = require('express');
 const router = express.Router();
-//const opts = require('../../index').getOptions();
+const opts = require('../../index').getOptions();
 const cmsHelper = require('../cms-helper');
+const AccountActions = require('../actions/account');
+const AdminActions = require('../actions/admin');
+const logger = require('../logger');
 
 function isAdminAuthd(req) {
   return !!req.adminSession.iduser;
 }
 
-router.all('*', function(req, res, next) {
+router.all('*', async function(req, res, next) {
   const url = req.originalUrl;
 
-  if(cmsHelper.isAdminPage(url)) {
-    if(!isAdminAuthd(req)) {
-      return res.redirect('/admin/login');
-    }
+  if(!cmsHelper.isAdminPage(url)) return next();
+
+  if(!isAdminAuthd(req)) {
+
+  }
+  else {
+    if(!req.locals) req.locals = {};
+    req.locals.user = await AccountActions.getUser(req.adminSession.iduser);
+
+    if(!req.locals.user) return res.redirect('/admin/login');
   }
 
   return next();
@@ -23,24 +32,21 @@ router.all('*', function(req, res, next) {
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-  UserModel.byID(req.adminSession.iduser, function (err, user) {
-    res.render('admin/index', {
-      user: user
+    return res.render('admin/index', {
+      user: req.locals.user
     });
-  });
 });
 
-router.get('/pages', function (req, res) {
-  var page = req.query.page || 1;
-  CMSModel.adminList(page, {category: req.category}, function (err, pageList, total) {
-    if (!pageList) pageList = [];
+router.get('/pages', async function (req, res) {
+  const pageNo = Math.max(+req.query.page || 1, 1);
 
-    res.renderWithGlobals('admin/pages', {
-      pageList: pageList,
-      page: page,
-      total: total
-    });
-  });
+  const outObj = await AdminActions.getPageList(pageNo, req.category);
+
+    res.render('admin/pages', Object.assign({
+      pageList: outObj.posts,
+      page: pageNo,
+      total: outObj.total
+  }, opts.pageDefaults));
 });
 
 router.get('/settings', function (req, res) {
@@ -105,22 +111,18 @@ router.post('/page/:idPage?', function (req, res) {
 router.get('/login', function (req, res) {
   res.render('admin/login', {});
 });
-router.post('/login', function (req, res, next) {
-  var loginData = {user: req.body.user, pass: req.body.pass};
 
-  UserModel.login(loginData, function (err, user) {
-    if (err) return next();
+router.post('/login', async function (req, res, next) {
+  const user = await AccountActions.login(req.body.user, req.body.pass);
 
-    if (!user) {
-      return res.render('admin/login', {msg: 'Username / password incorrect!', user: req.body.user});
-    }
+  if(!user) {
+    logger.warn('failed auth for email ', req.body.user);
+    return res.render('admin/login', {msg: 'Username / password incorrect!', user: req.body.user});
+  }
 
+  req.adminSession.iduser = user.id;
 
-    //write cookie, redirect to home!
-    req.adminSession.iduser = user.id;
-    return res.redirect('/admin');
-
-  });
+  return res.redirect('/admin');
 });
 
 

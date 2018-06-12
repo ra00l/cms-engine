@@ -13,10 +13,12 @@ const defaultOptions = {
     adminMasterPage: '',
     sitePage: ''
   },
+  ipp: 10,
   connectionString: '',
   salt: '1234',
   sessionSalt: '4567',
-  adminPath: '/admin'
+  adminPath: '/admin',
+  dateFormat: 'yyyy-MM-dd'
 };
 let appOptions = null;
 

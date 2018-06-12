@@ -24,4 +24,7 @@ ALTER TABLE public.page RENAME COLUMN publish_date TO "publishDate" ;
 update page set "idCategory"=null where "idCategory"=1;
 delete from category where id=1
 
-
+ALTER TABLE public."user" add "confirmKey" varchar(255) null;
+ALTER TABLE public."user" RENAME COLUMN date_created TO "createdAt" ;
+ALTER TABLE public."user" add "updatedAt" timestamp null;
+createdAt

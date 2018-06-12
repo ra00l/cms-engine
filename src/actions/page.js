@@ -11,6 +11,7 @@ module.exports = {
     }
 
     const page = await db.page.findOne({where: {url: urlParts[urlParts.length - 1], idCategory: idCat}});
+
     return page;
   }
 

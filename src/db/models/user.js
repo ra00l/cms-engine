@@ -15,7 +15,7 @@ const User = db.define('user', {
     type: Sequelize.STRING,
     allowNull: true
   },
-  password: {
+  pass: {
     type: Sequelize.STRING
   },
   confirmKey: {

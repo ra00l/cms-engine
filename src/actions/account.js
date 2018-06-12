@@ -1,6 +1,16 @@
+const db = require('../db/models');
+const utilities = require('../utilities');
+
 module.exports = {
   login: async function(user, pass) {
+    if(!user || !pass) return null;
 
+    const hashedPass = utilities.hashString(pass);
+
+    return db.user.findOne({where: {email: user, pass: hashedPass}});
+  },
+  getUser: async function(idUser) {
+    return db.user.findOne({where: {id: idUser}});
   },
   logout: function(){
 

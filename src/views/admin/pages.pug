@@ -18,8 +18,8 @@ block content
 							tr
 								td #{p.id}
 								td
-									abbr(title=p.title) #{p.name}
-									a(href='/' + p.url,target="_blank"): i.fa.fa-external-link(style="margin-left:10px")
-								td #{formatDate(p.date_created)} / #{ p.date_last_update ? moment(p.date_last_update).format(DATE_FORMAT) : ' [ not set ]'}
+									abbr(title=p.title) #{p.name || p.title}
+									a(href='/blog/' + p.url,target="_blank"): i.fa.fa-external-link(style="margin-left:10px")
+								td #{formatDate(p.date_created)} / #{ p.date_last_update ? moment(p.date_last_update).format(dateFormat) : ' [ not set ]'}
 								td
 									a(href="/admin/page/" + p.id) EDIT

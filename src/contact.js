@@ -10,7 +10,7 @@ module.exports = function(opts) {
 	if(!opts.mailFrom) throw 'mailFrom not defined!!!';
 
 	return function(req, res, next) {
-		if (req.method !== opts.method || req.originalUrl !== opts.path) return next();
+		if (req.method !== opts.method || req.path !== opts.path) return next();
 
 		var errList = [];
 		if (!req.body.email || !validateEmail(req.body.email)) errList.push('Email is not valid!');

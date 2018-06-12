@@ -3,7 +3,6 @@ const config = require('../../index').getOptions();
 const logger = require('../logger');
 
 require('pg').defaults.parseInt8 = true; //return BIGINT as integer, not string
-logger.info('options: ', config);
 
 const sequelize = new Sequelize(config.connectionString,
   {
@@ -13,7 +12,7 @@ const sequelize = new Sequelize(config.connectionString,
       idle: 20000,
       acquire: 20000
     },
-    logging: console.log,
+    logging: false, // console.log,
     operatorsAliases: false,
     dialect: 'postgresql',
     define: {
