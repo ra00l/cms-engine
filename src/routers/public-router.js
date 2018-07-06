@@ -12,8 +12,6 @@ module.exports = utilities.promiseCatch(async function (req, res, next) {
   let url = req.path;
   if(url.indexOf('/') === 0) url = url.substr(1);
 
-  console.log('entered public', url);
-
   let pageUrl = url.split('/');
 
   let page = await PageActions.getPageByUrl(pageUrl);

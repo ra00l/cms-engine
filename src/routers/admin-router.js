@@ -61,28 +61,26 @@ router.get('/settings', function (req, res) {
   });
 });
 
-router.get('/page/:idPage?', function (req, res) {
-  var idPage = req.params.idPage; //todo raul: get categs!
+router.get('/page/:idPage?', async function (req, res) {
+  const idPage = +req.params.idPage; //todo raul: get categs!
 
-  CMSModel.getPage(idPage, function (err, pageList) {
-    var page = pageList && pageList.length && pageList[0];
+  const page = await AdminActions.getPage(idPage);
 
-    var catList = [];
+    const catList = [];
     catList.splice(0, 0, {text: ' -- None --', value: ''});
 
-    res.render('admin/page', {
+    return res.render('admin/page', Object.assign({
       page: page,
       catList: catList
-    });
-  });
+    }, opts.pageDefaults));
 });
 
-router.post('/page/:idPage?', function (req, res) {
-  var errList = [];
+router.post('/page/:idPage?', async function (req, res) {
+  const errList = [];
   //errList.push('Url NOT unique!!');
 
   if (errList.length > 0) {
-    var catList = [];
+    const catList = [];
     catList.splice(0, 0, {text: ' -- None --', value: ''});
 
     return res.render('admin/page', {
@@ -93,19 +91,20 @@ router.post('/page/:idPage?', function (req, res) {
   }
 
   //save to db + redirect to ID page
-  var idPage = req.params.idPage;
-  CMSModel.savePage(idPage, {
+  const idPage = +req.params.idPage || null;
+
+  const page = await AdminActions.savePage(idPage, {
     title: req.body.title,
     url: req.body.url,
-    publish_date: req.body.publishDate,
+    publishDate: req.body.publishDate,
     category: req.body.category || null,
     content: req.body.content,
     description: req.body.description,
     exerpt: req.body.exerpt
-  }, function (id) {
-    if (!id) id = idPage;
-    return res.redirect('/admin/page/' + id);
   });
+
+    return res.redirect('/admin/page/' + page.id);
+
 });
 
 router.get('/login', function (req, res) {

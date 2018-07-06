@@ -11,5 +11,23 @@ module.exports = {
     const totalPageNo = Math.round(totalPosts / opts.ipp) + (totalPosts % opts.ipp === 0 ? 0 : 1);
 
     return { posts: posts, total: totalPageNo };
+  },
+  getPage: async function(idPage) {
+    return db.page.findById(idPage);
+  },
+  savePage: async function(idPage, pageProps) {
+    const page = await db.page.findById(idPage);
+
+    page.title = pageProps.title;
+    page.url = pageProps.url; //todo change url only on create? have some checks around it?
+    page.publishDate = pageProps.publishDate;
+    page.idCategory = pageProps.idCategory;
+    page.content = pageProps.content;
+    page.description = pageProps.description;
+    page.exerpt = pageProps.exerpt;
+
+    page.save();
+
+    return page;
   }
 };
