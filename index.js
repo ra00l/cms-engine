@@ -46,8 +46,8 @@ function init(expressApp, options) {
 
   expressApp.use(compression({ threshold: 7 }));
 
-  expressApp.use(appOptions.adminPath, require('./src/routers/admin-router'));
-  expressApp.use(require('./src/routers/public-router'));
+  expressApp.use(appOptions.adminPath, require('./src/routers/admin'));
+  expressApp.use(require('./src/routers/public'));
 
   hasInit = true;
 }

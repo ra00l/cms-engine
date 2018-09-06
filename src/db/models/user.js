@@ -18,10 +18,12 @@ const User = db.define('user', {
   pass: {
     type: Sequelize.STRING
   },
+  isActive: Sequelize.BOOLEAN,
+  userType: Sequelize.INTEGER,
   confirmKey: {
     type: Sequelize.STRING
   },
-  lastLogin: Sequelize.DATE,
+  lastLoginDate: Sequelize.DATE,
 
   // Timestamps
   createdAt: Sequelize.DATE,

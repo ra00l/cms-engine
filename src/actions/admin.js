@@ -2,6 +2,7 @@ const db = require('../db/models');
 const opts = require('../../index').getOptions();
 const Sequelize = require('sequelize');
 
+let _cachedSettings = null;
 module.exports = {
   getPageList: async function(pageNo, idCategory) {
     const posts = await db.raw.query(`select p.id, p.title, p.name, p.url, p."publishDate", p.exerpt, u.name "author" from page p left join "user" u on u.id=p."createdBy" where p."publishDate" is not null offset ${(
@@ -29,5 +30,10 @@ module.exports = {
     page.save();
 
     return page;
+  },
+  getSettings: async function() {
+    if(_cachedSettings) return _cachedSettings;
+
+    return db.settings.getAll();
   }
 };

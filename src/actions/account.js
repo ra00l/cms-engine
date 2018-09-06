@@ -6,6 +6,7 @@ module.exports = {
     if(!user || !pass) return null;
 
     const hashedPass = utilities.hashString(pass);
+    console.log('pass', pass, 'hash', hashedPass);
 
     return db.user.findOne({where: {email: user, pass: hashedPass}});
   },

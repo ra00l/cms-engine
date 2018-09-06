@@ -12,19 +12,19 @@ function isAdminAuthd(req) {
   return !!req.adminSession.iduser;
 }
 
-router.all('*', async function(req, res, next) {
+router.all('*', async function (req, res, next) {
   const url = req.originalUrl;
 
-  if(!cmsHelper.isAdminPage(url)) return next();
+  if (!cmsHelper.isAdminPage(url)) return next();
 
-  if(!isAdminAuthd(req)) {
+  if (!isAdminAuthd(req)) {
 
   }
   else {
-    if(!req.locals) req.locals = {};
+    if (!req.locals) req.locals = {};
     req.locals.user = await AccountActions.getUser(req.adminSession.iduser);
 
-    if(!req.locals.user) return res.redirect('/admin/login');
+    if (!req.locals.user) return res.redirect('/admin/login');
   }
 
   return next();
@@ -32,9 +32,9 @@ router.all('*', async function(req, res, next) {
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-    return res.render('admin/index', {
-      user: req.locals.user
-    });
+  return res.render('admin/index', {
+    user: req.locals.user
+  });
 });
 
 router.get('/pages', async function (req, res) {
@@ -42,22 +42,18 @@ router.get('/pages', async function (req, res) {
 
   const outObj = await AdminActions.getPageList(pageNo, req.category);
 
-    res.render('admin/pages', Object.assign({
-      pageList: outObj.posts,
-      page: pageNo,
-      total: outObj.total
+  res.render('admin/pages', Object.assign({
+    pageList: outObj.posts,
+    page: pageNo,
+    total: outObj.total
   }, opts.pageDefaults));
 });
 
-router.get('/settings', function (req, res) {
-  var page = req.query.page || 1;
-  CMSModel.settingsList(page, function (err, settList) {
-    if (!settList) settList = [];
+router.get('/settings', async function (req, res) {
+  const settList = await AdminActions.getSettings();
 
-    res.render('admin/settings', {
-      settList: settList,
-      DATE_FORMAT: 'YYYY-MM-DD'
-    });
+  res.render('admin/settings', {
+    settList: settList
   });
 });
 
@@ -66,13 +62,13 @@ router.get('/page/:idPage?', async function (req, res) {
 
   const page = await AdminActions.getPage(idPage);
 
-    const catList = [];
-    catList.splice(0, 0, {text: ' -- None --', value: ''});
+  const catList = [];
+  catList.splice(0, 0, {text: ' -- None --', value: ''});
 
-    return res.render('admin/page', Object.assign({
-      page: page,
-      catList: catList
-    }, opts.pageDefaults));
+  return res.render('admin/page', Object.assign({
+    page: page,
+    catList: catList
+  }, opts.pageDefaults));
 });
 
 router.post('/page/:idPage?', async function (req, res) {
@@ -103,7 +99,7 @@ router.post('/page/:idPage?', async function (req, res) {
     exerpt: req.body.exerpt
   });
 
-    return res.redirect('/admin/page/' + page.id);
+  return res.redirect('/admin/page/' + page.id);
 
 });
 
@@ -114,8 +110,10 @@ router.get('/login', function (req, res) {
 router.post('/login', async function (req, res, next) {
   const user = await AccountActions.login(req.body.user, req.body.pass);
 
-  if(!user) {
+  if (!user) {
+    //todo: send cookie / keep session with failed login attempts
     logger.warn('failed auth for email ', req.body.user);
+
     return res.render('admin/login', {msg: 'Username / password incorrect!', user: req.body.user});
   }
 

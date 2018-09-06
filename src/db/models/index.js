@@ -6,6 +6,7 @@ module.exports = {
 
   user: require('./user'),
   category: require('./category'),
+  setting: require('./setting'),
   page: require('./page'),
   pageHistory: require('./page-history'),
 
