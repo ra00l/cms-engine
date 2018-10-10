@@ -18,7 +18,7 @@ router.all('*', async function (req, res, next) {
   if (!cmsHelper.isAdminPage(url)) return next();
 
   if (!isAdminAuthd(req)) {
-
+    return res.redirect('/admin/login');
   }
   else {
     if (!req.locals) req.locals = {};
